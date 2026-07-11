@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-birra-gold to-birra-accent text-birra-dark font-semibold py-3 px-6 rounded-lg hover:from-birra-accent hover:to-birra-gold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+  
+  .btn-secondary {
+    @apply border border-birra-gold text-birra-gold font-medium py-2 px-4 rounded-lg hover:bg-birra-gold hover:text-birra-dark transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full bg-birra-gray border border-birra-gold/30 rounded-lg px-4 py-3 text-birra-light placeholder-gray-500 focus:outline-none focus:border-birra-gold focus:ring-1 focus:ring-birra-gold transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-birra-gray/50 backdrop-blur-sm border border-birra-gold/20 rounded-xl p-6;
+  }
+  
+  .select-option {
+    @apply bg-birra-gray text-birra-light border border-birra-gold/30 rounded-lg px-4 py-2 focus:outline-none focus:border-birra-gold cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-birra-gold to-birra-accent bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+}
