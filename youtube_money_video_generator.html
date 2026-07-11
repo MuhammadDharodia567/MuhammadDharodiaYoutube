@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Money Video Generator - Complete Suite</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        
+        .header { 
+            text-align: center; 
+            margin-bottom: 30px;
+            border-bottom: 3px solid #ff0000;
+            padding-bottom: 20px;
+            background: rgba(255, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .header h1 { 
+            font-size: 42px; 
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .header p { font-size: 18px; opacity: 0.9; }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 1000px) {
+            .main-content { grid-template-columns: 1fr; }
+        }
+        
+        .video-preview { 
+            width: 100%; 
+            aspect-ratio: 9/16;
+            max-height: 675px;
+            background: #000;
+            border: 3px solid #ff0000;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+        }
+        .slide { 
+            width: 100%; 
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            padding: 40px;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .slide.active { opacity: 1; z-index: 1; }
+        .slide h1 { 
+            font-size: 48px; 
+            margin-bottom: 20px; 
+            color: #ffff00;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            line-height: 1.2;
+        }
+        .slide h2 { 
+            font-size: 36px; 
+            margin-bottom: 15px; 
+            color: #00ff00;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        .slide p { 
+            font-size: 24px; 
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+        .hook { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); }
+        .main { background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%); }
+        .cta { 
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%); 
+            color: #000;
+            font-weight: bold;
+        }
+        .cta h1, .cta p { color: #000 !important; text-shadow: none !important; }
+        
+        .controls-panel {
+            background: #2d2d2d;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #ff0000;
+        }
+        
+        .timer { 
+            text-align: center; 
+            font-size: 32px; 
+            margin: 20px 0;
+            font-weight: bold;
+            color: #ffff00;
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .controls { 
+            display: flex; 
+            gap: 10px; 
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        button { 
+            padding: 12px 24px; 
+            font-size: 16px; 
+            background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%); 
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        button:hover { 
+            background: linear-gradient(135deg, #ff3333 0%, #ff0000 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+        button:active { transform: translateY(0); }
+        button:disabled { 
+            background: #666; 
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .script-box { 
+            background: #2d2d2d; 
+            padding: 25px; 
+            border-left: 4px solid #ff0000;
+            margin: 20px 0;
+            border-radius: 5px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .script-box h3 { 
+            color: #ffff00; 
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .script-box p { 
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        .stat { 
+            color: #00ff00; 
+            font-size: 32px; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .template-selector {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .template-selector select {
+            padding: 12px 20px;
+            font-size: 16px;
+            background: #1a1a1a;
+            color: #fff;
+            border: 2px solid #ff0000;
+            border-radius: 5px;
+            cursor: pointer;
+            min-width: 300px;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #1a1a1a;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff0000, #ffff00, #00ff00);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .export-options {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .export-options h3 {
+            color: #00ff00;
+            margin-bottom: 15px;
+        }
+        .export-btn {
+            background: linear-gradient(135deg, #00ff00 0%, #00cc00 100%);
+            margin: 5px;
+        }
+        .export-btn:hover {
+            background: linear-gradient(135deg, #33ff33 0%, #00ff00 100%);
+        }
+        
+        .info-panel {
+            background: rgba(0, 255, 0, 0.1);
+            border: 2px solid #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .info-panel h4 {
+            color: #00ff00;
+            margin-bottom: 10px;
+        }
+        
+        .speed-control {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .speed-control label {
+            font-size: 16px;
+        }
+        .speed-control input {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 YOUTUBE MONEY VIDEO GENERATOR</h1>
+            <p>Professional Video Script Templates & Preview Tool</p>
+            <p style="color: #00ff00; margin-top: 10px;">✓ 5 Complete Templates ✓ Real-time Preview ✓ Export Ready</p>
+        </div>
+
+        <div class="main-content">
+            <div>
+                <div class="video-preview" id="videoPreview">
+                    <!-- Slides will be dynamically loaded -->
+                </div>
+                
+                <div class="timer" id="timer">0:00 / 14:00</div>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                
+                <div class="template-selector">
+                    <label for="templateSelect" style="font-size: 18px; margin-right: 10px;">Choose Template:</label>
+                    <select id="templateSelect" onchange="loadTemplate()">
+                        <option value="1">Template 1: Build Wealth from Zero</option>
+                        <option value="2">Template 2: Compound Interest Explained</option>
+                        <option value="3">Template 3: 50/30/20 Budget Rule</option>
+                        <option value="4">Template 4: Passive Income Streams</option>
+                        <option value="5">Template 5: Rich People Mindset</option>
+                    </select>
+                </div>
+                
+                <div class="controls">
+                    <button onclick="firstSlide()">⏮️ First</button>
+                    <button onclick="previousSlide()">⬅️ Previous</button>
+                    <button onclick="playVideo()" id="playBtn">▶️ Play Full Video</button>
+                    <button onclick="nextSlide()">Next ➡️</button>
+                    <button onclick="lastSlide()">Last ⏭️</button>
+                </div>
+                
+                <div class="speed-control">
+                    <label>Playback Speed:</label>
+                    <input type="range" id="speedSlider" min="1" max="10" value="1" onchange="updateSpeed()">
+                    <span id="speedValue">1x</span>
+                </div>
+            </div>
+            
+            <div class="controls-panel">
+                <div class="script-box" id="scriptBox">
+                    <h3>📝 FULL SCRIPT</h3>
+                    <scriptContent></scriptContent>
+                </div>
+                
+                <div class="export-options">
+                    <h3>📤 EXPORT OPTIONS</h3>
+                    <button class="export-btn" onclick="exportScript()">📄 Export Script (TXT)</button>
+                    <button class="export-btn" onclick="exportSlides()">🖼️ Export Slide Images</button>
+                    <button class="export-btn" onclick="printVersion()">🖨️ Print Version</button>
+                </div>
+                
+                <div class="info-panel">
+                    <h4>💡 PRO TIPS</h4>
+                    <p>• Each slide timing is optimized for YouTube monetization (12-15 min sweet spot)</p>
+                    <p>• Use the speed slider to preview faster or practice your voiceover timing</p>
+                    <p>• Export scripts to use with AI voice generators like ElevenLabs or Murf.ai</p>
+                    <p>• Create thumbnails in Canva using the color scheme: Red (#ff0000), Yellow (#ffff00), Green (#00ff00)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Template data structure
+        const templates = {
+            1: {
+                title: "Build Wealth from Zero",
+                duration: "14:00",
+                slides: [
+                    {
+                        type: "hook",
+                        h1: "MOST PEOPLE WILL NEVER BE RICH",
+                        stat: "78% Live Paycheck-to-Paycheck",
+                        p: "Here's why..."
+                    },
+                    {
+                        type: "hook",
+                        h2: "Hey, I'm Your Finance Coach",
+                        p: "On this channel, we break down money concepts nobody taught you in school",
+                        cta: "👆 Subscribe & Turn On Notifications"
+                    },
+                    {
+                        type: "main",
+                        h2: "Why You're Broke",
+                        p1: "It's not that you don't earn enough...",
+                        p2: "It's that you don't know where your money goes",
+                        p2Color: "#00ff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "Pillar #1: INCOME",
+                        p1: "Salary = Linear Growth",
+                        p1Color: "#ffff00",
+                        p2: "Business = Exponential Growth",
+                        p2Color: "#00ff00",
+                        p3: "$500/month @ 8% for 30 years = $750,000"
+                    },
+                    {
+                        type: "main",
+                        h2: "Pillar #2: EXPENSES",
+                        p1: "50% = Needs (housing, food)",
+                        p1Color: "#ffff00",
+                        p2: "30% = Wants (entertainment)",
+                        p2Color: "#00ff00",
+                        p3: "20% = Savings & Investment",
+                        p3Color: "#ff69b4"
+                    },
+                    {
+                        type: "main",
+                        h2: "Pillar #3: INVESTMENT",
+                        p1: "Index Funds - Safe & Beginner Friendly",
+                        p2: "Real Estate - Medium Risk",
+                        p2Color: "#00ff00",
+                        p3: "Crypto - High Risk, High Reward",
+                        p3Color: "#ffff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "Your Action Plan This Week",
+                        p1: "Day 1-3: Track All Spending",
+                        p1Color: "#ffff00",
+                        p2: "Day 4-5: Cut 3 Unnecessary Expenses",
+                        p2Color: "#00ff00",
+                        p3: "Day 6-7: Open Investment Account",
+                        p3Color: "#ff69b4"
+                    },
+                    {
+                        type: "main",
+                        h2: "3 Pillars of Wealth",
+                        p1: "1. Income",
+                        p1Color: "#ffff00",
+                        p1Size: "32px",
+                        p2: "2. Expenses",
+                        p2Color: "#00ff00",
+                        p2Size: "32px",
+                        p3: "3. Investment",
+                        p3Color: "#ff69b4",
+                        p3Size: "32px",
+                        final: "You don't need to be rich to start—you just need to start"
+                    },
+                    {
+                        type: "cta",
+                        h1: "SUBSCRIBE NOW",
+                        p1: "Next Video:",
+                        p1Size: "28px",
+                        p2: "\"How I Saved $10,000 in 90 Days\"",
+                        p2Size: "24px",
+                        p3: "🔗 Link in Description"
+                    }
+                ],
+                slideTimes: [15, 15, 30, 120, 120, 120, 180, 60, 60],
+                script: `HOOK (0:00-0:15):
+"78% of Americans live paycheck-to-paycheck. The reason isn't that they don't earn enough—it's that they don't know where their money goes. In the next 15 minutes, I'll show you the three-step system to build real wealth, even if you're starting from nothing."
+
+INTRO (0:15-0:30):
+"Hey, I'm your finance coach. On this channel, we break down money concepts that nobody taught you in school. If you want financial freedom, hit subscribe and turn on notifications."
+
+PROBLEM (0:30-1:00):
+"The reason you're not rich isn't because you're not earning enough. It's because you're operating under the wrong mental model. Let me show you why."
+
+PILLAR 1 - INCOME (1:00-3:00):
+"First, you need income. But not just any income—you need income that scales. Salaried jobs give linear growth. Business and investments give exponential growth. If you invest $500/month at 8% return for 30 years, you'll have $750,000."
+
+PILLAR 2 - EXPENSES (3:00-5:00):
+"Most people focus on income. Rich people focus on expenses. You can't out-earn your expenses. Use the 50/30/20 rule: 50% needs, 30% wants, 20% savings. Cutting just three unnecessary expenses can save you $1,200/year."
+
+PILLAR 3 - INVESTMENT (5:00-7:00):
+"Money sitting in a savings account is losing value. You need to invest. Index funds are safest for beginners. Real estate offers medium risk. Crypto is high risk, high reward. Start with what you understand."
+
+ACTION PLAN (7:00-10:00):
+"Here's your action plan: Days 1-3, track all spending. Days 4-5, cut 3 unnecessary expenses. Days 6-7, open an investment account at Vanguard or Fidelity and invest in an S&P 500 index fund."
+
+SUMMARY (10:00-11:00):
+"The three pillars of wealth are: Income, Expenses, and Investment. You don't need to be rich to start—you just need to start."
+
+CTA (11:00-14:00):
+"If you learned something, subscribe and hit the notification bell. Next video: 'How I Saved $10,000 in 90 Days.' Link in description for free budget template."`
+            },
+            2: {
+                title: "Compound Interest Explained",
+                duration: "13:00",
+                slides: [
+                    {
+                        type: "hook",
+                        h1: "EINSTEIN'S 8TH WONDER",
+                        stat: "Compound Interest",
+                        p: "Will make you RICH or keep you POOR"
+                    },
+                    {
+                        type: "hook",
+                        h2: "What is Compound Interest?",
+                        p: "Money earns interest",
+                        p2: "Interest earns interest",
+                        p2Color: "#00ff00",
+                        p3: "This repeats FOREVER"
+                    },
+                    {
+                        type: "main",
+                        h2: "The Power of TIME",
+                        p1: "$1,000 @ age 25 = $21,724",
+                        p1Color: "#00ff00",
+                        p2: "$1,000 @ age 35 = $10,062",
+                        p2Color: "#ff69b4",
+                        p3: "10 year difference = $11,662!"
+                    },
+                    {
+                        type: "main",
+                        h2: "Real Example: $100/month",
+                        p1: "After 20 years: $60,000",
+                        p1Color: "#ffff00",
+                        p2: "Total invested: $24,000",
+                        p3: "Interest earned: $36,000",
+                        p3Color: "#00ff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "The DARK Side: Credit Card Debt",
+                        p1: "$5,000 @ 20% APR",
+                        p2: "Minimum payments only",
+                        p2Color: "#ff69b4",
+                        p3: "Takes 25 years to pay off!",
+                        p3Color: "#ff0000"
+                    },
+                    {
+                        type: "main",
+                        h2: "How to USE It",
+                        p1: "✓ Start EARLY (consistency > amount)",
+                        p1Color: "#00ff00",
+                        p2: "✓ Invest in Index Funds",
+                        p3: "✓ Reinvest Dividends",
+                        p3Color: "#ffff00"
+                    },
+                    {
+                        type: "cta",
+                        h1: "START TODAY!",
+                        p1: "Time is your greatest asset",
+                        p2: "Open investment account NOW",
+                        p3: "🔗 Links in description"
+                    }
+                ],
+                slideTimes: [15, 30, 60, 90, 90, 90, 60],
+                script: `HOOK (0:00-0:15):
+"Albert Einstein called compound interest the 8th wonder of the world. Here's why it's going to make you rich—or keep you poor."
+
+INTRO (0:15-0:45):
+"Compound interest is when your money earns interest, and then that interest earns interest, and this repeats forever. It's the most powerful force in building wealth."
+
+THE POWER OF TIME (0:45-1:45):
+"Let me show you why timing matters. If you invest $1,000 at age 25 with 8% annual return, by age 65 you'll have $21,724. Wait until 35? You'll only have $10,062. That 10-year delay costs you $11,662."
+
+REAL EXAMPLE (1:45-3:15):
+"Investing just $100/month for 20 years gives you $60,000. But you only put in $24,000. The other $36,000? Pure compound interest. That's free money."
+
+THE DARK SIDE (3:15-4:45):
+"Compound interest works against you too. $5,000 credit card debt at 20% APR, making only minimum payments? Takes 25 years to pay off. You'll pay $9,847 total. That's the cost of ignoring compound interest."
+
+HOW TO USE IT (4:45-6:15):
+"Start early—consistency matters more than amount. Invest in low-cost index funds. Never withdraw—reinvest all dividends. Don't check your balance daily. Let time do the work."
+
+CTA (6:15-13:00):
+"Time is your greatest asset. Open an investment account today. Even $25/month starts the snowball. Links to recommended brokers in description. Subscribe for more wealth-building strategies."`
+            },
+            3: {
+                title: "50/30/20 Budget Rule",
+                duration: "12:00",
+                slides: [
+                    {
+                        type: "hook",
+                        h1: "BUDGETING ISN'T COMPLICATED",
+                        stat: "The 50/30/20 Rule",
+                        p: "Changed my life FOREVER"
+                    },
+                    {
+                        type: "main",
+                        h2: "50% = NEEDS",
+                        p1: "Housing & Rent",
+                        p2: "Groceries & Food",
+                        p2Color: "#00ff00",
+                        p3: "Utilities & Insurance",
+                        p3Color: "#ffff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "30% = WANTS",
+                        p1: "Entertainment & Streaming",
+                        p2: "Dining Out",
+                        p2Color: "#ffff00",
+                        p3: "Hobbies & Fun",
+                        p3Color: "#00ff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "20% = SAVINGS & DEBT",
+                        p1: "Emergency Fund",
+                        p1Color: "#00ff00",
+                        p2: "Investments",
+                        p3: "Extra Debt Payments",
+                        p3Color: "#ffff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "Real Example: $3,000/month",
+                        p1: "$1,500 = Needs",
+                        p1Color: "#ffff00",
+                        p2: "$900 = Wants",
+                        p2Color: "#00ff00",
+                        p3: "$600 = Savings",
+                        p3Color: "#ff69b4"
+                    },
+                    {
+                        type: "main",
+                        h2: "Implementation Steps",
+                        p1: "1. Calculate take-home income",
+                        p2: "2. Apply the percentages",
+                        p2Color: "#00ff00",
+                        p3: "3. Set up automatic transfers",
+                        p3Color: "#ffff00"
+                    },
+                    {
+                        type: "cta",
+                        h1: "START THIS MONTH",
+                        p1: "Download free budget template",
+                        p2: "Track every dollar for 30 days",
+                        p3: "🔗 Link in description"
+                    }
+                ],
+                slideTimes: [15, 60, 60, 60, 90, 90, 60],
+                script: `HOOK (0:00-0:15):
+"If budgeting feels complicated, you're doing it wrong. The 50/30/20 rule changed my life, and it'll change yours too."
+
+NEEDS - 50% (0:15-1:15):
+"Fifty percent of your income goes to needs: housing, groceries, utilities, insurance. These are non-negotiable expenses. If your needs exceed 50%, you need to either increase income or reduce housing costs."
+
+WANTS - 30% (1:15-2:15):
+"Thirty percent is for wants: entertainment, dining out, hobbies, streaming services. This is your fun money. No guilt. But when you hit 30%, stop spending. This category prevents lifestyle inflation."
+
+SAVINGS - 20% (2:15-3:15):
+"Twenty percent goes to savings and debt: emergency fund, investments, extra debt payments. This is your future self paying you first. Automate this—don't rely on willpower."
+
+REAL EXAMPLE (3:15-5:45):
+"If you make $3,000/month after taxes: $1,500 for needs, $900 for wants, $600 for savings. That $600/month becomes $7,200/year. In 5 years with 8% return, that's over $43,000."
+
+IMPLEMENTATION (5:45-8:15):
+"Step 1: Calculate your actual take-home income. Step 2: Apply the percentages. Step 3: Set up automatic transfers on payday. Make savings invisible—out of sight, out of mind."
+
+CTA (8:15-12:00):
+"Start this month. Download my free budget template in the description. Track every dollar for 30 days. You'll be shocked where your money goes. Subscribe for weekly money tips. Next video: Best budgeting apps compared."`
+            },
+            4: {
+                title: "5 Passive Income Streams",
+                duration: "13:00",
+                slides: [
+                    {
+                        type: "hook",
+                        h1: "EARN WHILE YOU SLEEP",
+                        stat: "5 Passive Income Streams",
+                        p: "Rich people do this"
+                    },
+                    {
+                        type: "main",
+                        h2: "#1: DIVIDEND STOCKS",
+                        p1: "Buy dividend-paying stocks",
+                        p2: "Receive quarterly payments",
+                        p2Color: "#00ff00",
+                        p3: "Reinvest or take cash",
+                        p3Color: "#ffff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "#2: BONDS",
+                        p1: "Lend money to corporations",
+                        p2: "They pay you interest",
+                        p2Color: "#00ff00",
+                        p3: "Lower risk, lower return"
+                    },
+                    {
+                        type: "main",
+                        h2: "#3: RENTAL PROPERTY",
+                        p1: "Buy property, rent it out",
+                        p2: "Tenant pays mortgage + profit",
+                        p2Color: "#00ff00",
+                        p3: "Highest risk/reward",
+                        p3Color: "#ffff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "#4: DIGITAL PRODUCTS",
+                        p1: "Create once, sell forever",
+                        p2: "E-books, courses, templates",
+                        p2Color: "#00ff00",
+                        p3: "Requires upfront work",
+                        p3Color: "#ffff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "#5: AFFILIATE MARKETING",
+                        p1: "Recommend products, earn commission",
+                        p2: "YouTube, blog, social media",
+                        p2Color: "#00ff00",
+                        p3: "No inventory needed",
+                        p3Color: "#ffff00"
+                    },
+                    {
+                        type: "cta",
+                        h1: "PICK ONE & START",
+                        p1: "Don't try all 5 at once",
+                        p2: "Master one stream first",
+                        p3: "🔗 Free guide in description"
+                    }
+                ],
+                slideTimes: [15, 60, 60, 60, 60, 60, 60],
+                script: `HOOK (0:00-0:15):
+"Most people trade time for money. Rich people make money while sleeping. Here are 5 ways to do it."
+
+DIVIDEND STOCKS (0:15-1:15):
+"Buy dividend-paying stocks from stable companies. You receive quarterly payments just for owning shares. Reinvest them to buy more shares, creating a snowball effect. Average yield: 3-4% annually."
+
+BONDS (1:15-2:15):
+"Bonds are loans to corporations or governments. They pay you regular interest. Lower risk than stocks, but also lower returns. Great for diversification. Start with bond ETFs for instant diversification."
+
+RENTAL PROPERTY (2:15-3:15):
+"Buy property, rent it out. Your tenant pays the mortgage plus gives you profit. Requires significant upfront capital and management. Consider REITs for passive real estate exposure without landlord headaches."
+
+DIGITAL PRODUCTS (3:15-4:15):
+"Create once, sell forever. E-books, online courses, templates, presets. Requires upfront work but infinite scalability. I made $5,000 last month from a course I created 2 years ago."
+
+AFFILIATE MARKETING (4:15-5:15):
+"Recommend products you use and love. Earn commission on every sale. YouTube, blogs, social media—no inventory needed. I earn $3,000/month recommending tools I already use."
+
+CTA (5:15-13:00):
+"Don't try all 5 at once. Pick ONE that matches your skills and capital. Master it first, then expand. Download my free passive income starter guide in the description. Subscribe for weekly income strategies. Next video: How I built 3 income streams in 12 months."`
+            },
+            5: {
+                title: "Rich People Mindset",
+                duration: "12:00",
+                slides: [
+                    {
+                        type: "hook",
+                        h1: "POOR vs RICH MINDSET",
+                        stat: "5 Mental Shifts",
+                        p: "That create WEALTH"
+                    },
+                    {
+                        type: "main",
+                        h2: "MINDSET #1",
+                        p1: "Poor: How can I earn more?",
+                        p1Color: "#ff69b4",
+                        p2: "Rich: How can I create more VALUE?",
+                        p2Color: "#00ff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "MINDSET #2",
+                        p1: "Poor: I can't afford it",
+                        p1Color: "#ff69b4",
+                        p2: "Rich: HOW can I afford it?",
+                        p2Color: "#00ff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "MINDSET #3",
+                        p1: "Poor: Money is evil",
+                        p1Color: "#ff69b4",
+                        p2: "Rich: Money is FREEDOM",
+                        p2Color: "#00ff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "MINDSET #4",
+                        p1: "Poor: Save what's left after spending",
+                        p1Color: "#ff69b4",
+                        p2: "Rich: Spend what's left after SAVING",
+                        p2Color: "#00ff00"
+                    },
+                    {
+                        type: "main",
+                        h2: "MINDSET #5",
+                        p1: "Poor: Buy things to feel good",
+                        p1Color: "#ff69b4",
+                        p2: "Rich: Invest for future FREEDOM",
+                        p2Color: "#00ff00"
+                    },
+                    {
+                        type: "cta",
+                        h1: "CHANGE YOUR MINDSET",
+                        p1: "Thoughts become actions",
+                        p2: "Actions become habits",
+                        p3: "Habits become WEALTH",
+                        p3Color: "#ffff00"
+                    }
+                ],
+                slideTimes: [15, 60, 60, 60, 60, 60, 60],
+                script: `HOOK (0:00-0:15):
+"Poor people and rich people live in the same world but think in completely different ways. Here are 5 mindset shifts that create wealth."
+
+MINDSET #1 (0:15-1:15):
+"Poor thinking: How can I earn more? Rich thinking: How can I create more value? Employees ask for raises. Entrepreneurs solve bigger problems. Focus on value creation, not just income."
+
+MINDSET #2 (1:15-2:15):
+"Poor: I can't afford it. Game over. Rich: How can I afford it? Problem-solving begins. The first statement stops thinking. The second starts it. Train yourself to ask 'how'."
+
+MINDSET #3 (2:15-3:15):
+"Poor: Money is evil or not important. Rich: Money is a tool for freedom. Money amplifies who you already are. Want to help more people? You need more resources. Money is neutral."
+
+MINDSET #4 (3:15-4:15):
+"Poor: Save what's left after spending. Rich: Spend what's left after saving. Automate savings first. Pay yourself before paying bills. This one shift changes everything."
+
+MINDSET #5 (4:15-5:15):
+"Poor: Buy things to feel good now. Rich: Invest for future freedom. Short-term pleasure vs long-term wealth. Every dollar is a worker. Hire them to work for you, not spend them on depreciating assets."
+
+CTA (5:15-12:00):
+"Your thoughts become actions. Actions become habits. Habits become wealth. Start with one mindset shift this week. Which one resonated most? Comment below. Subscribe for weekly mindset training. Download my wealth mindset workbook in the description. Next video: Daily habits of self-made millionaires."`
+            }
+        };
+
+        let currentSlide = 0;
+        let isPlaying = false;
+        let playbackSpeed = 1;
+        let currentTemplate = 1;
+        let playTimeouts = [];
+
+        function loadTemplate(templateNum = currentTemplate) {
+            currentTemplate = templateNum;
+            const template = templates[templateNum];
+            const preview = document.getElementById('videoPreview');
+            
+            // Clear existing slides
+            preview.innerHTML = '';
+            
+            // Create new slides
+            template.slides.forEach((slideData, index) => {
+                const slide = document.createElement('div');
+                slide.className = `slide ${slideData.type} ${index === 0 ? 'active' : ''}`;
+                
+                if (slideData.h1) {
+                    const h1 = document.createElement('h1');
+                    h1.textContent = slideData.h1;
+                    slide.appendChild(h1);
+                }
+                
+                if (slideData.h2) {
+                    const h2 = document.createElement('h2');
+                    h2.textContent = slideData.h2;
+                    slide.appendChild(h2);
+                }
+                
+                if (slideData.stat) {
+                    const stat = document.createElement('p');
+                    stat.className = 'stat';
+                    stat.textContent = slideData.stat;
+                    slide.appendChild(stat);
+                }
+                
+                if (slideData.p) {
+                    const p = document.createElement('p');
+                    p.textContent = slideData.p;
+                    if (slideData.pColor) p.style.color = slideData.pColor;
+                    slide.appendChild(p);
+                }
+                
+                if (slideData.p1) {
+                    const p1 = document.createElement('p');
+                    p1.textContent = slideData.p1;
+                    if (slideData.p1Color) p1.style.color = slideData.p1Color;
+                    if (slideData.p1Size) p1.style.fontSize = slideData.p1Size;
+                    slide.appendChild(p1);
+                }
+                
+                if (slideData.p2) {
+                    const p2 = document.createElement('p');
+                    p2.textContent = slideData.p2;
+                    if (slideData.p2Color) p2.style.color = slideData.p2Color;
+                    if (slideData.p2Size) p2.style.fontSize = slideData.p2Size;
+                    slide.appendChild(p2);
+                }
+                
+                if (slideData.p3) {
+                    const p3 = document.createElement('p');
+                    p3.textContent = slideData.p3;
+                    if (slideData.p3Color) p3.style.color = slideData.p3Color;
+                    if (slideData.p3Size) p3.style.fontSize = slideData.p3Size;
+                    slide.appendChild(p3);
+                }
+                
+                if (slideData.cta) {
+                    const cta = document.createElement('p');
+                    cta.textContent = slideData.cta;
+                    cta.style.color = '#ffff00';
+                    cta.style.marginTop = '20px';
+                    slide.appendChild(cta);
+                }
+                
+                if (slideData.final) {
+                    const final = document.createElement('p');
+                    final.textContent = slideData.final;
+                    final.style.marginTop = '30px';
+                    final.style.fontStyle = 'italic';
+                    slide.appendChild(final);
+                }
+                
+                preview.appendChild(slide);
+            });
+            
+            // Update script box
+            document.getElementById('scriptBox').innerHTML = `
+                <h3>📝 ${template.title} - FULL SCRIPT</h3>
+                <pre style="white-space: pre-wrap; line-height: 1.8; font-family: inherit;">${template.script}</pre>
+            `;
+            
+            // Reset state
+            currentSlide = 0;
+            showSlide(0);
+            updateTimer();
+            updateProgress();
+        }
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.classList.remove('active'));
+            if (slides[n]) {
+                slides[n].classList.add('active');
+            }
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.slide');
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+                updateTimer();
+                updateProgress();
+            }
+        }
+
+        function previousSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+                updateTimer();
+                updateProgress();
+            }
+        }
+
+        function firstSlide() {
+            currentSlide = 0;
+            showSlide(currentSlide);
+            updateTimer();
+            updateProgress();
+        }
+
+        function lastSlide() {
+            const slides = document.querySelectorAll('.slide');
+            currentSlide = slides.length - 1;
+            showSlide(currentSlide);
+            updateTimer();
+            updateProgress();
+        }
+
+        function updateSpeed() {
+            playbackSpeed = parseInt(document.getElementById('speedSlider').value);
+            document.getElementById('speedValue').textContent = playbackSpeed + 'x';
+        }
+
+        function playVideo() {
+            if (isPlaying) return;
+            
+            // Clear any existing timeouts
+            playTimeouts.forEach(timeout => clearTimeout(timeout));
+            playTimeouts = [];
+            
+            isPlaying = true;
+            document.getElementById('playBtn').disabled = true;
+            document.getElementById('playBtn').textContent = '⏳ Playing...';
+            
+            const template = templates[currentTemplate];
+            const slides = document.querySelectorAll('.slide');
+            let accumulatedTime = 0;
+            
+            slides.forEach((_, index) => {
+                const delay = accumulatedTime / playbackSpeed;
+                const timeout = setTimeout(() => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                    updateTimer();
+                    updateProgress();
+                }, delay * 1000);
+                playTimeouts.push(timeout);
+                
+                accumulatedTime += template.slideTimes[index];
+            });
+            
+            const totalDuration = template.slideTimes.reduce((a, b) => a + b, 0);
+            const finalDelay = (totalDuration / playbackSpeed) * 1000;
+            
+            const finalTimeout = setTimeout(() => {
+                isPlaying = false;
+                document.getElementById('playBtn').disabled = false;
+                document.getElementById('playBtn').textContent = '▶️ Play Full Video';
+                alert(`✅ Video Complete!\n\nTemplate: ${template.title}\nDuration: ${template.duration}\nReady to export or record!`);
+            }, finalDelay);
+            playTimeouts.push(finalTimeout);
+        }
+
+        function updateTimer() {
+            const template = templates[currentTemplate];
+            const totalSeconds = template.slideTimes.slice(0, currentSlide).reduce((a, b) => a + b, 0);
+            const mins = Math.floor(totalSeconds / 60);
+            const secs = totalSeconds % 60;
+            document.getElementById('timer').innerText = 
+                `${mins}:${secs < 10 ? '0' : ''}${secs} / ${template.duration}`;
+        }
+
+        function updateProgress() {
+            const template = templates[currentTemplate];
+            const totalSeconds = template.slideTimes.reduce((a, b) => a + b, 0);
+            const currentSeconds = template.slideTimes.slice(0, currentSlide + 1).reduce((a, b) => a + b, 0);
+            const percentage = (currentSeconds / totalSeconds) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+        }
+
+        function exportScript() {
+            const template = templates[currentTemplate];
+            const blob = new Blob([template.script], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${template.title.replace(/\s+/g, '_')}_Script.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function exportSlides() {
+            alert('📸 To export slides as images:\n\n1. Take screenshots of each slide in the preview\n2. Or use browser DevTools to capture full-page screenshots\n3. Recommended: Use OBS Studio to record the preview window\n\nPro tip: Create these slides in Canva using the same color scheme for professional results!');
+        }
+
+        function printVersion() {
+            const template = templates[currentTemplate];
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>${template.title} - Print Version</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 40px; }
+                        h1 { color: #ff0000; border-bottom: 2px solid #ff0000; padding-bottom: 10px; }
+                        h2 { color: #0066cc; margin-top: 30px; }
+                        pre { white-space: pre-wrap; line-height: 1.8; background: #f5f5f5; padding: 20px; border-radius: 5px; }
+                        .meta { color: #666; margin-bottom: 20px; }
+                    </style>
+                </head>
+                <body>
+                    <h1>🎬 ${template.title}</h1>
+                    <p class="meta">Duration: ${template.duration} | Slides: ${template.slides.length}</p>
+                    <h2>📝 Full Script</h2>
+                    <pre>${template.script}</pre>
+                    <h2>📊 Slide Breakdown</h2>
+                    <pre>${JSON.stringify(template.slides, null, 2)}</pre>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+        // Initialize with first template
+        loadTemplate(1);
+    </script>
+</body>
+</html>
