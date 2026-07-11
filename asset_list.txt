@@ -1,0 +1,288 @@
+YOUTUBE MONEY VIDEO - MASTER ASSET LIST
+═══════════════════════════════════════════════════════════════
+
+ORGANIZE YOUR FILES LIKE THIS:
+
+📁 Video_Project_Name/
+├── 📁 01_Scripts/
+│   ├── final_script_v1.txt
+│   ├── final_script_v2.txt
+│   └── script_notes.txt
+│
+├── 📁 02_Audio/
+│   ├── voiceover_raw.wav
+│   ├── voiceover_edited.wav
+│   ├── background_music.mp3
+│   └── sound_effects/
+│       ├── whoosh_01.wav
+│       ├── ding_01.wav
+│       └── transition_01.wav
+│
+├── 📁 03_Footage/
+│   ├── b_roll/
+│   │   ├── money_counting.mp4
+│   │   ├── city_timelapse.mp4
+│   │   ├── office_work.mp4
+│   │   ├── shopping_grocery.mp4
+│   │   └── calculator_closeup.mp4
+│   ├── screen_recordings/
+│   │   ├── investment_platform.mp4
+│   │   ├── budget_app_demo.mp4
+│   │   └── compound_calculator.mp4
+│   └── camera_a_roll/
+│       ├── intro_take1.mp4
+│       ├── intro_take2.mp4
+│       └── outro_final.mp4
+│
+├── 📁 04_Graphics/
+│   ├── title_cards/
+│   │   ├── main_title.png
+│   │   └── section_dividers.png
+│   ├── charts_graphs/
+│   │   ├── compound_interest_chart.png
+│   │   ├── pie_chart_503020.png
+│   │   ├── wealth_comparison.png
+│   │   └── growth_timeline.png
+│   ├── text_overlays/
+│   │   ├── statistic_78percent.png
+│   │   ├── key_point_01.png
+│   │   ├── key_point_02.png
+│   │   └── callout_boxes.png
+│   ├── lower_thirds/
+│   │   ├── name_title.png
+│   │   └── social_handles.png
+│   └── end_screen/
+│       ├── subscribe_button.png
+│       ├── video_placeholder_01.png
+│       └── video_placeholder_02.png
+│
+├── 📁 05_Thumbnails/
+│   ├── thumbnail_v1.psd
+│   ├── thumbnail_v2.psd
+│   ├── thumbnail_final.png
+│   └── thumbnail_sources/
+│       ├── face_photo.jpg
+│       ├── background.jpg
+│       └── icons/
+│
+├── 📁 06_Exports/
+│   ├── render_01_draft.mp4
+│   ├── render_02_review.mp4
+│   └── final_upload.mp4
+│
+└── 📁 07_Documentation/
+    ├── production_checklist.pdf
+    ├── asset_log.xlsx
+    └── upload_details.txt
+
+═══════════════════════════════════════════════════════════════
+
+STOCK FOOTAGE DOWNLOAD LIST (FREE SOURCES):
+───────────────────────────────────────────────────────────────
+
+Search Terms for Pexels/Pixabay/Mixkit:
+□ "money counting hands"
+□ "cash stacking"
+□ "piggy bank"
+□ "calculator typing"
+□ "stock market graph"
+□ "financial charts"
+□ "business meeting"
+□ "office work computer"
+□ "shopping cart grocery"
+□ "credit card payment"
+□ "bank mobile app"
+□ "coins falling"
+□ "wallet opening"
+□ "receipts bills"
+□ "calendar time lapse"
+□ "clock spinning"
+□ "hourglass"
+□ "sunrise sunset"
+□ "city skyline timelapse"
+□ "people walking busy"
+□ "handshake business"
+□ "signature signing"
+□ "computer trading"
+□ "real estate house"
+□ "keys handoff"
+□ "mailbox check"
+□ "sleeping rest"
+□ "relaxed happy person"
+□ "mountain climbing"
+□ "chess game strategy"
+□ "lightbulb idea"
+□ "brain animation"
+□ "growth plant tree"
+□ "snowball rolling"
+□ "domino effect"
+□ "progress bar loading"
+□ "checkmark completing"
+
+═══════════════════════════════════════════════════════════════
+
+GRAPHICS TEMPLATES TO CREATE IN CANVA:
+───────────────────────────────────────────────────────────────
+
+Template 1: TITLE CARD
+Size: 1920x1080
+Elements:
+- Bold sans-serif font (Montserrat/Bebas Neue)
+- Gradient background (blue to purple or dark gradient)
+- Main title text (centered, large)
+- Subtitle (smaller, below)
+- Channel logo (corner)
+Save as: title_card_template.canva
+
+Template 2: STATISTIC OVERLAY
+Size: 1920x1080
+Elements:
+- Large number (78%, $10K, etc.)
+- Supporting text below
+- Icon related to stat
+- Animated entrance effect note
+Save as: stat_overlay_template.canva
+
+Template 3: COMPARISON CHART
+Size: 1920x1080
+Elements:
+- Split screen (left/right or top/bottom)
+- Two columns with headers
+- Checkmarks and X marks
+- Contrasting colors
+Save as: comparison_template.canva
+
+Template 4: PIE CHART
+Size: 1080x1080 (square for flexibility)
+Elements:
+- Three segments (50%, 30%, 20%)
+- Labels for each segment
+- Icons for each category
+- Legend if needed
+Save as: pie_chart_template.canva
+
+Template 5: PROGRESS BAR
+Size: 1920x1080
+Elements:
+- Bar outline
+- Fill animation note
+- Checkpoint markers
+- Step labels
+Save as: progress_bar_template.canva
+
+Template 6: LOWER THIRD
+Size: 1920x1080 (safe area centered)
+Elements:
+- Name text
+- Title/description
+- Simple background shape
+- Subtle animation note
+Save as: lower_third_template.canva
+
+Template 7: KEY POINT CALLOUT
+Size: 1920x1080
+Elements:
+- Numbered badge (1, 2, 3...)
+- Point title
+- Brief description (1-2 lines)
+- Related icon
+Save as: key_point_template.canva
+
+Template 8: END SCREEN
+Size: 1920x1080
+Elements:
+- Subscribe button (left side)
+- Two video placeholders (right side)
+- Notification bell icon
+- Social media handles
+- Background branding
+Save as: end_screen_template.canva
+
+═══════════════════════════════════════════════════════════════
+
+FONT RECOMMENDATIONS:
+───────────────────────────────────────────────────────────────
+
+Headlines (Bold, Impactful):
+- Bebas Neue (free, Google Fonts)
+- Montserrat Black (free, Google Fonts)
+- Oswald (free, Google Fonts)
+- Anton (free, Google Fonts)
+
+Body Text (Readable):
+- Open Sans (free, Google Fonts)
+- Roboto (free, Google Fonts)
+- Lato (free, Google Fonts)
+- Source Sans Pro (free, Google Fonts)
+
+Numbers/Data:
+-Roboto Mono (free, Google Fonts)
+- IBM Plex Mono (free, Google Fonts)
+- Space Mono (free, Google Fonts)
+
+═══════════════════════════════════════════════════════════════
+
+COLOR PALETTE FOR MONEY VIDEOS:
+───────────────────────────────────────────────────────────────
+
+Professional Trust Palette:
+- Primary: #1E3A8A (Deep Blue)
+- Secondary: #10B981 (Green - money/growth)
+- Accent: #F59E0B (Gold/Amber - wealth)
+- Neutral: #F3F4F6 (Light Gray)
+- Dark: #1F2937 (Charcoal)
+
+High Energy Palette:
+- Primary: #DC2626 (Red - urgency)
+- Secondary: #2563EB (Blue - trust)
+- Accent: #FBBF24 (Yellow - attention)
+- Neutral: #FFFFFF (White)
+- Dark: #000000 (Black)
+
+Minimalist Modern:
+- Primary: #000000 (Black)
+- Secondary: #FFFFFF (White)
+- Accent: #10B981 (Green only accent)
+- Grays: #6B7280, #9CA3AF, #D1D5DB
+
+═══════════════════════════════════════════════════════════════
+
+SOFTWARE SHORTCUTS CHEAT SHEET:
+───────────────────────────────────────────────────────────────
+
+DaVinci Resolve:
+- Cut: B
+- Delete: Backspace
+- Ripple Delete: Shift+Backspace
+- Split: Ctrl/Cmd + \
+- Zoom Timeline: Alt + Scroll
+- Snap: N toggle
+- Render: Ctrl/Cmd + R
+
+Premiere Pro:
+- Cut: C
+- Razor: Ctrl/Cmd + K
+- Ripple Delete: Shift+Delete
+- Zoom: = and -
+- Snap: S toggle
+- Render Enter: Return
+
+CapCut:
+- Split: Ctrl/Cmd + B
+- Delete: Delete
+- Speed: Ctrl/Cmd + R
+- Freeze: Ctrl/Cmd + Alt + F
+
+═══════════════════════════════════════════════════════════════
+
+ASSET TRACKING SPREADSHEET COLUMNS:
+───────────────────────────────────────────────────────────────
+
+Create Excel/Google Sheet with these columns:
+| Asset Name | Type | Source | Date Added | Used In Videos | License | Notes |
+|------------|------|--------|------------|----------------|---------|-------|
+| money_hands_01.mp4 | B-roll | Pexels | 2024-01-15 | Video 1, 3 | Free | Good quality |
+| compound_chart.png | Graphic | Self-made | 2024-01-16 | Video 2 | Owned | Canva template |
+| upbeat_corp.mp3 | Music | YouTube Lib | 2024-01-15 | All videos | Free | Track #12345 |
+
+═══════════════════════════════════════════════════════════════

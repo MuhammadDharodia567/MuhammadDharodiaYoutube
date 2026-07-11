@@ -1,0 +1,364 @@
+AI VIDEO GENERATION PROMPTS - COMPLETE COLLECTION
+═══════════════════════════════════════════════════════════════
+
+HOW TO USE THESE PROMPTS:
+Copy and paste into AI video tools like:
+- Runway ML (runwayml.com)
+- Pika Labs (pika.art)
+- HeyGen (heygen.com)
+- Synthesia (synthesia.io)
+- D-ID (d-id.com)
+- Kaiber (kaiber.ai)
+- Stable Video Diffusion
+
+═══════════════════════════════════════════════════════════════
+
+CATEGORY 1: MONEY & WEALTH ANIMATIONS
+───────────────────────────────────────────────────────────────
+
+PROMPT 001: Compound Interest Growth
+"Create a photorealistic 10-second animation showing compound 
+interest. Start with a single $100 bill on a table. Watch as it 
+slowly duplicates, then those duplicates duplicate again. The pile 
+grows slowly at first, then accelerates rapidly into a massive stack 
+reaching toward the ceiling. Warm golden lighting, cinematic depth 
+of field, smooth exponential growth visualization, 4k quality."
+
+PROMPT 002: Money Flow Buckets
+"Animate an isometric view of money flowing from a central source 
+into three transparent buckets. First bucket (largest, 50%) labeled 
+'NEEDS' fills with blue coins. Second bucket (medium, 30%) labeled 
+'WANTS' fills with yellow coins. Third bucket (smallest, 20%) 
+labeled 'SAVINGS' fills with green coins. Percentages appear above 
+each bucket as they fill. Clean 3D render, pastel colors, smooth 
+fluid simulation, corporate Memphis style."
+
+PROMPT 003: Cash to Investment Transformation
+"Morph animation: A stack of cash dollars transforms into stock 
+certificates, which then transform into a growing line graph, which 
+finally transforms into a luxurious retirement scene (beach house, 
+relaxing couple). Seamless transitions, magical particle effects 
+during transformations, inspiring and aspirational mood, warm 
+color grading, 8 second loop."
+
+PROMPT 004: Debt Snowball Visualization
+"Show multiple snowballs at the top of a hill, each labeled with 
+different debts ($500, $2000, $5000). As they roll down, they merge 
+together, growing larger and faster. At the bottom, the massive 
+snowball crashes through a wall labeled 'DEBT FREE'. Dynamic camera 
+follows the action, dramatic slow motion at impact, realistic snow 
+physics mixed with financial graphics."
+
+PROMPT 005: Passive Income Machine
+"Steampunk-style machine animation. Coins drop into a funnel at 
+top, travel through complex gears and pipes labeled 'Dividends', 
+'Rental Income', 'Digital Products', 'Affiliate Commissions'. 
+Coins multiply as they travel through each section. Machine outputs 
+a continuous stream of coins into a treasure chest. Intricate 
+mechanical details, brass and copper materials, glowing elements, 
+magical realism style."
+
+═══════════════════════════════════════════════════════════════
+
+CATEGORY 2: DATA VISUALIZATION & GRAPHS
+───────────────────────────────────────────────────────────────
+
+PROMPT 006: Exponential vs Linear Growth Chart
+"Create a sleek animated line graph on dark background. Two lines 
+draw themselves simultaneously. Line A (red) goes up steadily in 
+straight diagonal - label 'Linear Income'. Line B (green) starts 
+flat then curves dramatically upward - label 'Exponential Growth'. 
+Grid lines subtly pulse. Numbers animate at endpoints showing 
+stark difference. Modern fintech aesthetic, neon accents, smooth 
+easing functions, 4k resolution."
+
+PROMPT 007: Age Comparison Investment Results
+"Split screen comparison. Left side: 'Started at 25' shows a 
+character icon, timeline of 40 years, ending with '$500,000' in 
+large gold numbers. Right side: 'Started at 35' shows same 
+character, timeline of 30 years, ending with '$200,000' in smaller 
+silver numbers. A giant red arrow points to the difference. Clean 
+infographic style, subtle animations, professional color scheme."
+
+PROMPT 008: 50/30/20 Pie Chart Animation
+"Watch a circle divide itself into three perfect segments. First 
+segment (50%) slides out in blue with icon of house/car/groceries. 
+Second segment (30%) slides out in yellow with restaurant/movie 
+icons. Third segment (20%) slides out in green with piggy bank 
+and graph icons. Each segment pulses gently. Labels rotate into 
+place. White background, soft shadows, Apple keynote style 
+animation."
+
+PROMPT 009: Wealth Gap Bar Chart
+"Animated horizontal bar chart comparing wealth percentiles. Bars 
+grow from left to right at different speeds. Bottom 50% bar barely 
+moves (label: '$8,000 net worth'). Middle 40% grows moderately 
+(label: '$150,000'). Top 10% shoots across screen (label: 
+'$1,200,000+'). Color gradient from gray to gold as wealth 
+increases. Subtle particle effects on richest bar. Data 
+visualization masterpiece, Bloomberg terminal aesthetic."
+
+PROMPT 010: Inflation Eating Savings
+"Metaphorical animation: A pile of cash sits on a table. Invisible 
+force (representing inflation) slowly makes the bills shrink in 
+size while price tags on items around them grow larger. A graph 
+in background shows purchasing power line declining. Slightly 
+ominous mood but still professional. Clever visual metaphor, 
+smooth morphing effects."
+
+═══════════════════════════════════════════════════════════════
+
+CATEGORY 3: LIFESTYLE & ASPIRATIONAL SCENES
+───────────────────────────────────────────────────────────────
+
+PROMPT 011: Financial Freedom Lifestyle
+"Cinematic montage: Couple waking up naturally (no alarm), drinking 
+coffee on balcony overlooking ocean, checking investment portfolio 
+on tablet with smile, playing with kids in park during weekday 
+afternoon, traveling to exotic location. Warm golden hour lighting 
+throughout, dreamy atmosphere, aspirational but achievable vibe, 
+shot on ARRI Alexa aesthetic, 4k HDR."
+
+PROMPT 012: Stress vs Peace Contrast
+"Split screen transformation. Left side: Person stressed at desk, 
+piles of bills, clock showing late night, rubbing temples, dark 
+cool lighting. Right side: Same person relaxed, organized finances 
+on tablet, clock showing reasonable hour, smiling, warm natural 
+lighting. Split screen dissolves to full screen of peaceful scene. 
+Emotional storytelling, relatable transformation."
+
+PROMPT 013: Journey from Broke to Wealthy
+"Time-lapse style journey. Character starts in small apartment 
+counting change. Seasons change outside window. Character learns 
+(reads books, watches tutorials), starts side hustle (working on 
+laptop), makes first investment (clicking button on phone). Time 
+passes, character moves to nicer home, checks growing portfolio, 
+finally relaxes in comfortable retirement setting. Pixar-style 
+character animation, heartwarming story arc."
+
+PROMPT 014: Emergency Fund Security Blanket
+"Metaphorical animation: Family sleeping peacefully under a giant 
+blanket. Camera pulls back to reveal blanket is made of dollar 
+bills woven together, labeled 'Emergency Fund - 6 Months Expenses'. 
+Storm clouds gather outside but family remains safe and dry inside. 
+Cozy warm interior lighting vs stormy exterior. Comfort and 
+security visualized."
+
+PROMPT 015: Multiple Income Streams Orchestra
+"Conductor (you) leading an orchestra. Each section represents 
+income stream: Strings = Salary, Brass = Side Hustle, Woodwinds = 
+Dividends, Percussion = Rental Income. As each section plays, 
+musical notes transform into coins that flow into a collection 
+basket. Harmonious and beautiful, creative metaphor, vibrant 
+colors, Disney animation style."
+
+═══════════════════════════════════════════════════════════════
+
+CATEGORY 4: EXPLAINER & EDUCATIONAL ANIMATIONS
+───────────────────────────────────────────────────────────────
+
+PROMPT 016: How Credit Score Works
+"Floating 3D credit score meter (300-850 scale). Various factors 
+orbit around it like planets: Payment History (largest orbit, 
+35%), Credit Utilization (30%), Length of History (15%), New 
+Credit (10%), Credit Mix (10%). Each planet pulses when mentioned. 
+Score needle moves as positive behaviors are shown. Educational 
+solar system metaphor, clean 3D renders, NASA infographic style."
+
+PROMPT 017: Tax Bracket Explanation
+"Animated staircase with 7 steps (tax brackets). A character 
+earning money climbs the stairs. Only the money on each new step 
+is taxed at that step's rate, not all previous money. Clear 
+visual showing marginal vs effective tax rate. Helpful friendly 
+guide character explains. Bright colors, approachable educational 
+style, Khan Academy meets Pixar."
+
+PROMPT 018: Dollar Cost Averaging Demo
+"Calendar flips through months. Each month, same dollar amount 
+buys shares of a fluctuating stock. When price is high, fewer 
+shares. When price is low, more shares. At end, show average cost 
+per share vs lump sum timing risk. Smooth graph overlay showing 
+the strategy's benefit. Clean motion graphics, financial education 
+aesthetic."
+
+PROMPT 019: Asset vs Liability Explanation
+"Two columns appear. Left column 'ASSETS': arrows point inward 
+bringing money (rental property, dividend stocks, bonds). Right 
+column 'LIABILITIES': arrows point outward taking money (car loan, 
+credit card debt, expensive subscriptions). Character moves items 
+between columns making smart choices. Robert Kiyosaki Rich Dad 
+concept visualized clearly. Simple bold graphics."
+
+PROMPT 020: Inflation Explained Simply
+"Grocery cart animation. Year 2020: Cart full of groceries costs 
+$100. Fast forward to 2024: Same cart, fewer items, costs $120. 
+Fast forward to 2030: Even fewer items, costs $150. Graph in 
+background shows purchasing power declining. Gentle educational 
+tone, not fear-mongering. Clear visual metaphor everyone 
+understands."
+
+═══════════════════════════════════════════════════════════════
+
+CATEGORY 5: HOOKS & ATTENTION GRABBERS
+───────────────────────────────────────────────────────────────
+
+PROMPT 021: Shocking Statistic Reveal
+"Dark screen. Single spotlight hits center. Giant red numbers 
+'78%' slam onto screen with impact shockwave. Numbers crack and 
+shatter, revealing full text: '78% of Americans live paycheck to 
+paycheck'. Camera pushes in dramatically. Ominous music sting. 
+Michael Bay meets financial education. High impact, impossible 
+to scroll past."
+
+PROMPT 022: Before/After Money Mindset
+"Quick cut montage. BEFORE (rapid cuts): Alarm blaring, traffic 
+jam, stressed face, pile of bills, declined credit card, arguing 
+couple. AFTER (smooth slow motion): Peaceful wake up, calm commute, 
+confident smile, organized finances, approved transaction, happy 
+couple. Sharp contrast in pacing and color grading. Powerful 
+emotional hook."
+
+PROMPT 023: Time Running Out Urgency
+"Hourglass with sand running out fast. Each grain of sand is a 
+tiny dollar sign. As sand runs out, text appears: 'Every year you 
+wait to invest costs you $XX,XXX'. Clock ticking sound visualized 
+as ripples. Urgent but not panic-inducing. Motivational push to 
+action. Christopher Nolan time manipulation aesthetic."
+
+PROMPT 024: Secret Revealed Teaser
+"Shadowy figure holds glowing orb labeled 'Wealth Secret'. Figure 
+slowly reveals: 'It's not what you think...' Orb opens to show 
+simple concept (compound interest icon). Light bursts forth 
+illuminating everything. Mysterious to enlightening journey. 
+Movie trailer quality, dramatic lighting."
+
+PROMPT 025: Pattern Interrupt Hook
+"Normal office scene suddenly freezes. Everything turns black and 
+white except one element (stack of money) which stays in color. 
+Text appears: 'Everything you know about money is wrong.' Freeze 
+frame shatters like glass, revealing new colorful world. Creative 
+pattern interrupt, Matrix-style reality shift."
+
+═══════════════════════════════════════════════════════════════
+
+CATEGORY 6: CALL TO ACTION & END SCREENS
+───────────────────────────────────────────────────────────────
+
+PROMPT 026: Subscribe Button Animation
+"Giant red YouTube subscribe button floats in space. Cursor clicks 
+it. Button transforms to gray 'Subscribed' with checkmark. Bell 
+icon appears next to it, cursor clicks bell, bell animates ringing 
+with visible sound waves. Confetti explosion. Text: 'Join 100K+ 
+smart investors!' Clean 3D render, satisfying click animations, 
+ASMR-worthy feedback."
+
+PROMPT 027: Next Video Teaser
+"Film strip unrolls showing quick 1-second clips from next video: 
+someone gasping in surprise, money raining down, dramatic graph 
+spike, 'YOU WON'T BELIEVE THIS' text flash. Film strip burns away 
+to reveal premiere date/time. Movie trailer aesthetic, building 
+anticipation."
+
+PROMPT 028: Resource Link Highlight
+"Laptop screen shows description box. Mouse scrolls to links 
+section. Each link glows as mouse hovers: 'Free Budget Template', 
+'Investment Platform', 'Recommended Books'. Click animation on 
+each. Clean screen recording style with enhanced UI elements."
+
+PROMPT 029: Community Invitation
+"Door opens to reveal bustling community space. People helping 
+each other, sharing wins, celebrating milestones. Text: 'Join our 
+free community of 50,000+ members building wealth together.' Warm 
+inviting atmosphere, diverse group, supportive vibes. 3D animation 
+style."
+
+PROMPT 030: Series Continuity
+"Recap montage of previous episodes in series (quick 0.5 second 
+clips each). Then preview of upcoming episodes (mysterious silhouettes 
+with titles). Timeline graphic showing viewer is on a journey. 
+Text: 'This is just the beginning.' Epic series feel, Marvel 
+cinematic universe style."
+
+═══════════════════════════════════════════════════════════════
+
+CATEGORY 7: B-ROLL ENHANCEMENTS
+───────────────────────────────────────────────────────────────
+
+PROMPT 031: Money Counting Cinematic
+"Extreme close-up macro shot of hands counting hundred dollar 
+bills. Slow motion. Each bill flip creates subtle sparkle. Shallow 
+depth of field. Warm golden lighting. Satisfying tactile quality. 
+Shot on RED camera, luxury commercial aesthetic."
+
+PROMPT 032: City Timelapse Prosperity
+"Hyper-lapse through major financial district (NYC, London, Tokyo). 
+Skyscrapers gleaming, traffic flowing, people moving purposefully. 
+Sunrise to sunset transition showing opportunity. Tilt-shift effect 
+for miniature feel. Inspiring and ambitious mood."
+
+PROMPT 033: Technology Finance Interface
+"Futuristic holographic interface showing portfolio performance. 
+Finger swipes through charts, taps to drill down, pinches to zoom. 
+Data flows like water. Sci-fi meets practical finance. Minority 
+Report style but usable today. Blue and green data colors."
+
+PROMPT 034: Coffee Shop Productivity
+"Aesthetic overhead shot of productive workspace: laptop showing 
+investment research, notebook with financial goals, coffee cup, 
+plant. Hands typing, writing, calculating. Cozy productive vibe. 
+Instagram-worthy flatlay, warm natural lighting."
+
+PROMPT 035: Celebration Win Moment
+"Person receives notification on phone, eyes go wide, huge smile, 
+fist pump. Quick cut to telling partner/family, group celebration. 
+Genuine joy and relief. Authentic emotional moment, documentary 
+style cinematography."
+
+═══════════════════════════════════════════════════════════════
+
+ADVANCED PROMPT ENGINEERING TIPS:
+───────────────────────────────────────────────────────────────
+
+1. BE SPECIFIC ABOUT STYLE:
+   Instead of "make a graph"
+   Say: "Create a sleek animated line graph on dark background 
+   with neon accents, modern fintech aesthetic, 4k resolution"
+
+2. DEFINE CAMERA MOVEMENT:
+   Add: "Slow push-in", "Orbiting shot", "Top-down view", 
+   "Tracking shot following the action"
+
+3. SET THE MOOD:
+   Include: "Inspiring and aspirational", "Urgent but not 
+   panic-inducing", "Warm and inviting", "Professional and 
+   trustworthy"
+
+4. SPECIFY LIGHTING:
+   Mention: "Golden hour lighting", "Dramatic chiaroscuro", 
+   "Soft diffused light", "Neon cyberpunk glow"
+
+5. REFERENCE KNOWN STYLES:
+   Compare to: "Pixar animation style", "Bloomberg terminal 
+   aesthetic", "Apple keynote presentation", "Netflix documentary 
+   cinematography"
+
+6. INCLUDE TECHNICAL SPECS:
+   Request: "4k resolution", "60fps smooth motion", "HDR color", 
+   "10 second duration", "Seamless loop"
+
+7. ITERATE AND REFINE:
+   First prompt rarely perfect. Generate, review, adjust specifics, 
+   regenerate. Keep what works, modify what doesn't.
+
+═══════════════════════════════════════════════════════════════
+
+NEGATIVE PROMPTS (WHAT TO AVOID):
+───────────────────────────────────────────────────────────────
+
+Add these to avoid common AI video issues:
+"no distorted faces, no morphing artifacts, no flickering, 
+no inconsistent lighting, no blurry text, no warped objects, 
+no sudden jumps, no low resolution, no cartoonish unless specified, 
+no copyright logos, no brand names unless requested"
+
+═══════════════════════════════════════════════════════════════
